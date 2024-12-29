@@ -31,7 +31,7 @@ int main() {
         case '/':
             if (num2 != 0) {
                 result = num1 / num2;
-                printf("Result: %d / %d = %d\n", num1, num2, result);
+                printf("The final is: %d / %d = %d\n", num1, num2, result);
             } else {
                 printf("Error: Division by zero is not allowed.\n");
             }
@@ -40,5 +40,5 @@ int main() {
             printf("Error: Invalid operator.\n");
     }
 
-    return 0;
+  
 }
