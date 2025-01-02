@@ -1,35 +1,32 @@
-#include<stdio.h>
-void amount(float,float,int);
+#include <stdio.h>
 
 int main()
 {
-    int n;
-    float p,r;
+    float principal, rate, total_amount;
+    int period, year = 1;
 
-    printf("Enter principal amount:");
-    scanf("%f",&p);
+    // Input values from the user
+    printf("Enter the principal amount: ");
+    scanf("%f", &principal);
 
-    printf("Enter rate of interest:");
-    scanf("%f",&r);
+    printf("Enter the rate of interest (e.g., 0.05 for 5%%): ");
+    scanf("%f", &rate);
 
-    printf("Enter time period:");
-    scanf("%d",&n);
+    printf("Enter the time period (in years): ");
+    scanf("%d", &period);
 
-    amount(p,r,n);
+    // Initialize total_amount with the principal
+    total_amount = principal;
+
+    // Calculate the total amount using a loop
+    while (year <= period)
+    {
+        total_amount = total_amount * (1 + rate);
+        year++;
+    }
+
+    // Display the result
+    printf("Total amount after %d years: %.2f\n", period, total_amount);
 
     return 0;
-}
-
-void amount(float p,float r,int n);
-  {
-    float total_amount;
-    int y=1;
-    total_amount=p;
-
-    while(y<=n)
-    {
-        total_amount=total_amount(1+r);
-        y++;
-    }
-return 0;
 }
