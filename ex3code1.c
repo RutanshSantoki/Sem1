@@ -3,14 +3,15 @@
 int main()
 {
     int h;
-    printf("Enter the number");
-    scanf("%d",&h);
 
-    if(h%2==0)
-    printf("Number is even\n");
+        printf("Enter the value of h:");
+        scanf("%d",&h);
 
-    else
-     printf("Number is odd\n");
+        if(h%2==0)
+        printf("Number is even\n");
 
-     return 0;
+        else
+        printf("Number is odd\n");
+
+        return 0;
 }

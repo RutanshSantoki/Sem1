@@ -1,35 +1,44 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main() {
-    int num1, num2, result;
+int main()
+{
+    int num1,num2,result;
     char operator;
 
-    // Input: Enter the first number, operator, and second number
-    printf("Enter first number: ");
-    scanf("%d", &num1);
+    //taking input for num1 operator and num2
 
-    printf("Enter operator (+, -, *, /): ");
-    scanf(" %c", &operator);  // Notice the space before %c to catch any leftover newline character
+    printf("Enter the value of num1:");
+    scanf("%d",&num1);
 
-    printf("Enter second number: ");
-    scanf("%d", &num2);
+    printf("Select operator you want to use (+,-,*,/):");
+    scanf(" %s",&operator);
 
-    // Switch statement to perform the operation based on the operator
-    switch (operator) {
-        case '+':
-            result = num1 + num2;
-            printf("Result: %d + %d = %d\n", num1, num2, result);
-            break;
-        case '-':
-            result = num1 - num2;
-            printf("Result: %d - %d = %d\n", num1, num2, result);
-            break;
-        case '*':
-            result = num1 * num2;
-            printf("Result: %d * %d = %d\n", num1, num2, result);
-            break;
-        case '/':
-            if (num2 != 0) {
+    printf("Enter the value of num2:");
+    scanf("%d",&num2);
+}
+
+switch(operator)
+{
+    case "+" :
+    {
+        result=num1+num2;
+        printf("%d+%d=%d\n",num1,num2,result);
+    }
+
+    case "-" :
+    {
+        result=num1-num2;
+        printf("%d-%d=%d\n",num1,num2,result);
+    }
+
+    case "*" :
+    {
+        result=num1*num2;
+        printf("%d*%d=%d"num1,num2,result);
+    }
+
+    case "/" :
+     if (num2 != 0) {
                 result = num1 / num2;
                 printf("The final is: %d / %d = %d\n", num1, num2, result);
             } else {
@@ -40,5 +49,11 @@ int main() {
             printf("Error: Invalid operator.\n");
     }
 
-  
-}
+
+
+
+
+
+
+
+
