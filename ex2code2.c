@@ -1,19 +1,19 @@
 #include<stdio.h>
+
 int main()
 {
-    int num,days,months,years;
+    int num,day,month,year;
     int n;
 
-        printf("Enter number of days:");
-        scanf("%d",&num);
+    printf("Enter number of days :");
+    scanf("%d",&num);
 
-            years=num/365;
-            n=num%365;
-                months=n/30;
-                    days=n%30;
+    year=num/365;
+    n=num%365;
+    month=n/30;
+    day=n%30;
 
-                        printf("%d years %d months %d days\n",years,months,days);
+    printf("%d Years %d Months %d Days\n",year,month,day);
 
-                        return 0;
-
+    return 0;
 }

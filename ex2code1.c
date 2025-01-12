@@ -2,11 +2,11 @@
 int main()
 {
     float C,F;
-    printf("Enter temperature in Celcuis :");
-    scanf("%f",&C);
+    printf("Enter temperature in Fahernheat :");
+    scanf("%f",&F);
 
-     F=C*1.8+32;
-    printf("Temperature in ferenheat id %f\n",F);
+     C=(F-32)/1.8;
+    printf("Temperature in celcius id %f\n",C);
 
     return 0;
 }
