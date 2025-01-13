@@ -3,7 +3,8 @@
 int main()
 {
     int i,j,h;
-    printf("Enter a value for h: ");
+
+    printf("Enter the value of h:");
     scanf("%d",&h);
 
     for(i=1;i<=h;i++)
@@ -14,5 +15,4 @@ int main()
         }
         printf("\n");
     }
-            return 0;
 }
