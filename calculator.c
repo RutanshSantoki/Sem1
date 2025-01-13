@@ -2,58 +2,49 @@
 
 int main()
 {
-    int num1,num2,result;
+    int num1, num2, result;
     char operator;
 
-    //taking input for num1 operator and num2
+    // Taking input for num1, operator, and num2
+    printf("Enter the value of num1: ");
+    scanf("%d", &num1);
 
-    printf("Enter the value of num1:");
-    scanf("%d",&num1);
+    printf("Select operator you want to use (+, -, *, /): ");
+    scanf(" %c", &operator); // Use %c to read a single character
 
-    printf("Select operator you want to use (+,-,*,/):");
-    scanf(" %s",&operator);
+    printf("Enter the value of num2: ");
+    scanf("%d", &num2);
 
-    printf("Enter the value of num2:");
-    scanf("%d",&num2);
-}
-
-switch(operator)
-{
-    case "+" :
+    // Using a switch-case block for operator handling
+    switch(operator)
     {
-        result=num1+num2;
-        printf("%d+%d=%d\n",num1,num2,result);
-    }
+        case '+':
+            result = num1 + num2;
+            printf("%d + %d = %d\n", num1, num2, result);
+            break;
 
-    case "-" :
-    {
-        result=num1-num2;
-        printf("%d-%d=%d\n",num1,num2,result);
-    }
+        case '-':
+            result = num1 - num2;
+            printf("%d - %d = %d\n", num1, num2, result);
+            break;
 
-    case "*" :
-    {
-        result=num1*num2;
-        printf("%d*%d=%d"num1,num2,result);
-    }
+        case '*':
+            result = num1 * num2;
+            printf("%d * %d = %d\n", num1, num2, result);
+            break;
 
-    case "/" :
-     if (num2 != 0) {
+        case '/':
+            if (num2 != 0) {
                 result = num1 / num2;
-                printf("The final is: %d / %d = %d\n", num1, num2, result);
+                printf("%d / %d = %d\n", num1, num2, result);
             } else {
                 printf("Error: Division by zero is not allowed.\n");
             }
             break;
+
         default:
             printf("Error: Invalid operator.\n");
     }
 
-
-
-
-
-
-
-
-
+    return 0;
+}
